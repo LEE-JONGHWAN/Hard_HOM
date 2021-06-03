@@ -18,9 +18,9 @@ public class BrandSearch {
 	 */
 	
 	public static void main(String[] args) {
-		BrandName brnam = BrandName.삼성전자;
-		System.out.println("JB 다방에 환영합니다");
-		BrandName brandNames[] = BrandName.values();
+		var brnam = BrandName.삼성전자;
+		System.out.println("JH 하드샵에 환영합니다");
+		var brandNames = BrandName.values();
 		/**
 		 * 나중에 Enum to List 사용하여 깔끔하게 정리
 		 */
