@@ -93,7 +93,7 @@ public class BrandSearch {
 			default:
 				run = false; // 무한 루프에서 작업에서 빠져나온다.
 				break;
-				}
+				
 		}		
 	}
 }
