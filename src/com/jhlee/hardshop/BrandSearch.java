@@ -21,6 +21,7 @@ public class BrandSearch {
 		var brnam = BrandName.삼성전자;
 		System.out.println("JH 하드샵에 환영합니다");
 		var brandNames = BrandName.values();
+		boolean run = true; // 무한 루프 돌릴 때 사용한다.
 		/**
 		 * 나중에 Enum to List 사용하여 깔끔하게 정리
 		 */
@@ -51,13 +52,19 @@ public class BrandSearch {
 //				System.out.println("브랜드명이 틀렸습니다. 다시 입력해 주세요!");	
 //			}
 
-
+		while(run) {
+		System.out.println("1.삼성전자|2.SK하이닉스|3.WD|4.마이크론|5.씨게이트|6.웨스턴디지털|7.샌디스크|8.크루셜|9.");
 		System.out.println("원하는 브랜드를 입력: ");
 		
 		Scanner scanner = new Scanner(System.in);
-
+		
+	
+		
 		int 제품번호 = scanner.nextInt();
 		BrandName brandname = BrandName.values()[제품번호 -1];
+		if (brandname != brandname) 
+			System.out.println("브랜드명이 틀렸습니다. 다시 입력해 주세요!");
+		}
 			switch (brandname){
 			case 삼성전자:
 			System.out.println("삼성전자를 선택하셨습니다.");
@@ -83,13 +90,10 @@ public class BrandSearch {
 			case 크루셜:
 			System.out.println("크루셜를 선택하셨습니다.");
 			break;
-			default:	
+			default:
+				run = false; // 무한 루프에서 작업에서 빠져나온다.
 				break;
 				}
-			
-			System.out.println("브랜드명이 틀렸습니다. 다시 입력해 주세요!");
-			scanner.close();
-			return;
-
+		}		
 	}
 }
