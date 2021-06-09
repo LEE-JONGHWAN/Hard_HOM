@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.jhlee.hardshop.utility","l":"BrandName"},{"p":"com.jhlee.hardshop.store","l":"JH_Hardshop"},{"p":"com.jhlee.hardshop.store","l":"TelNumSave"},{"p":"com.jhlee.hardshop.store","l":"Test_List"},{"p":"com.jhlee.hardshop.store","l":"TotalOrders"},{"p":"com.jhlee.hardshop.store","l":"TraditionalHard"}]

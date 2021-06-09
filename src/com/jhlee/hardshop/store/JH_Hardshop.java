@@ -1,5 +1,4 @@
-package com.jhlee.hardshop;
-
+package com.jhlee.hardshop.store;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -7,11 +6,22 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
 
+import com.jhlee.hardshop.utility.BrandName;
 
-import com.jhlee.hardmodule.BrandName;
+/**
+ * 이 프로그램은 <strong>하드디스크</strong>의 전문 판매 쇼핑몰을 구현한다.
+ * 이 프로그램의 깃허브 저장소는 다음과 같다.
+ * 
+ * @see <a href="git@github.com:LEE-JONGHWAN/Hard_hom.git">Hard_hom,하드샵 메인</a>
+ * @see <a href="git@github.com:LEE-JONGHWAN/Hard_module.git">Hard_module,하드샵 모듈</a>
+ * @see <a href="git@github.com:LEE-JONGHWAN/webstore_jh.git">웹페이지</a>
+ * 
+ * @author 이종환(Lee JongHwan)
+ * @version 1.0.0
+ *
+ */
 
-
-public class BrandSearch {
+public class JH_Hardshop {
 	
 	/**
 	 * stringbuilder ==> stringbuffer로

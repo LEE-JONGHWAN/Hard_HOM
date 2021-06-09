@@ -1,8 +1,8 @@
-package com.jhlee.hardshop;
+package com.jhlee.hardshop.store;
 
 import java.util.Scanner;
 
-import com.jhlee.hardmodule.BrandName;
+import com.jhlee.hardshop.utility.BrandName;
 
 public class Test_List {
 

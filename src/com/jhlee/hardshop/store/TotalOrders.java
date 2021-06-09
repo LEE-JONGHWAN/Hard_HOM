@@ -1,4 +1,4 @@
-package com.jhlee.hardshop;
+package com.jhlee.hardshop.store;
 
 public class TotalOrders {
 	private static int orderCount = 0;
