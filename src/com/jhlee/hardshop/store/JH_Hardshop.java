@@ -1,12 +1,14 @@
 package com.jhlee.hardshop.store;
 
 import java.time.LocalDate;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
 
 import com.jhlee.hardshop.utility.BrandName;
+import com.jhlee.hardshop.utility.Size;
 
 /**
  * 이 프로그램은 <strong>하드디스크</strong>의 전문 판매 쇼핑몰을 구현한다.
@@ -29,7 +31,9 @@ public class JH_Hardshop {
 	
 	public static void main(String[] args) {
 //		var brnam = BrandName.삼성전자;
+		System.out.println("====================");
 		System.out.println("JH 하드샵에 환영합니다");
+		System.out.println("==================== \n\n");
 		var brandNames = BrandName.values();
 		boolean run = true; // 무한 루프 돌릴 때 사용한다.
 		
@@ -38,6 +42,7 @@ public class JH_Hardshop {
 		 */
 
 //삼성전자,SK하이닉스,WD,마이크론,씨게이트, 웨스턴디지털, 샌디스크, 크루셜 리스트 업 (switch문에서 "없이 문자열 입력 가능하게 됨.
+		System.out.println("===================================================================");
 		String menu = String.join("/", "[ ",
 				BrandName.삼성전자.toString() + (BrandName.삼성전자.ordinal() + 1),
 				BrandName.SK하이닉스.toString() + (BrandName.SK하이닉스.ordinal() + 1),
@@ -53,8 +58,9 @@ public class JH_Hardshop {
 		
 		String weekDay = LocalDateTime.now().format(DateTimeFormatter.ofPattern("E")  // E => Weekday
 		.withLocale(Locale.KOREAN));
-		System.out.println(weekDay + "요일 특가 세일 : " + brandNames[idx]);
-
+		System.out.println("===================================================================");
+		System.out.println(weekDay + "요일 특가 세일 : " + "##" + brandNames[idx]  + "##" + "\n");
+		
 //			
 //			if (menu == brnam) {
 //				System.out.println("브랜드명 " + brnam + "를 선택하셨습니다.");
@@ -73,32 +79,81 @@ public class JH_Hardshop {
 		int 제품번호 = s.nextInt();
 			switch (제품번호){
 			case 1 :
-			System.out.println("삼성전자를 선택하셨습니다.");
+			System.out.println("삼성전자를 선택하셨습니다.\n");
 			break;
 			case 2 :
-			System.out.println("SK하이닉스를 선택하셨습니다.");
+			System.out.println("SK하이닉스를 선택하셨습니다.\n");
 			break;
 			case 3 :
-			System.out.println("WD를 선택하셨습니다.");
+			System.out.println("WD를 선택하셨습니다.\n");
 			break;
 			case 4 :
-			System.out.println("마이크론을 선택하셨습니다.");
+			System.out.println("마이크론을 선택하셨습니다.\n");
 			break;
 			case 5 :
-			System.out.println("씨게이트를 선택하셨습니다.");
+			System.out.println("씨게이트를 선택하셨습니다.\n");
 			break;
 			case 6 :
-			System.out.println("웨스턴디지털을 선택하셨습니다.");
+			System.out.println("웨스턴디지털을 선택하셨습니다.\n");
 			break;
 			case 7 :
-			System.out.println("샌디스크를 선택하셨습니다.");
+			System.out.println("샌디스크를 선택하셨습니다.\n");
 			break;
 			case 8 :
-			System.out.println("크루셜를 선택하셨습니다.");
+			System.out.println("크루셜를 선택하셨습니다.\n");
 			break;
 			default:
 				run = false; // 무한 루프에서 작업에서 빠져나온다.
 				break;
-		}	}	
+		}	
+			
+			Scanner scanner = new Scanner(System.in);
+			Size[] values = Size.values();
+			System.out.println("=====================");
+			for(Size si: values) {
+			System.out.println(si + "(" + 
+			si.getAbbreviation() + ")");
+			}
+			System.out.println("=====================");
+			System.out.println("하드의 용량을 선택해 주세요.");
+			System.out.println("선택은: ");
+			String input = scanner.nextLine();
+			input = input.trim().toUpperCase();
+			Size size = null;
+			
+			switch(input) {
+			case "SMALL" :
+			case "250" :
+				size = Size.SMALL;
+				System.out.println("250GB를 선택하셨습니다.");
+				break;
+			case "MEDIUM" :
+			case "500" :
+				size = Size.MEDIUM;
+				System.out.println("500GB를 선택하셨습니다.");
+				break;
+			case "LARGE" :
+			case "1" :
+				size = Size.LARGE;
+				System.out.println("1TB를 선택하셨습니다.");
+				break;
+			}
+			
+			switch (size) {
+			case SMALL :
+				size = Size.SMALL;
+				System.out.println("250GB");
+				break;
+			case MEDIUM :
+				size = Size.MEDIUM;
+				System.out.println("500GB");
+				break;
+			case LARGE :
+				size = Size.LARGE;
+				System.out.println("1TB");
+				break;
+			}
+
+		}	
 	}
 }

@@ -42,6 +42,21 @@ import java.time.LocalDate;
 관련 기능: 상품 등록, 정보 수정
  */
 
+/**
+ * 현재 하기의 리스트를 하나의 클래스로 묶을 내용 정리중.
+ * 
+ * 제품 목록 => 제품코드/제품브랜드/제품이름/제품설명/제품가격/제품무게/하드디스크용량/제품이미지/제품내용/제조일/등록일
+ * 재고및수익 => 하드디스크수량/하드디스크판매수량/하드디스크판매누적량
+ * 
+ * 
+ * 
+ * @author 이종환(Lee JongHwan)
+ * @version 1.0.0
+ *
+ */
+
+public class 
+
 public class TraditionalHard {
 	private String 제품코드; // 하드디스크 제품코드.
 	private String 제품브랜드; // 하드디스크 제품 브랜드 이름.
