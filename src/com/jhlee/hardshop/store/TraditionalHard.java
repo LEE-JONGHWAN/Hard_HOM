@@ -55,7 +55,6 @@ import java.time.LocalDate;
  *
  */
 
-public class 
 
 public class TraditionalHard {
 	private String 제품코드; // 하드디스크 제품코드.
