@@ -1,8 +1,9 @@
 package com.jhlee.hardshop.utility;
 
 public enum Size {
-	SMALL("S"), MEDIUM("M"),
-	LARGE("L"), EXTRA_LARGE("XL");
+	SMALL("250"),MEDIUM("500"),
+	LARGE("1");
+
 
 	private String abbreviation;
 
