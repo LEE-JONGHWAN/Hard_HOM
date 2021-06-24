@@ -33,7 +33,12 @@ package com.jhlee.hardshop.store;
 
 import java.awt.Image;
 import java.io.File;
+import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.Random;
+import com.jhlee.hardshop.*;
+import com.jhlee.hardshop.utility.BrandName;
 
 /**
  * 하드디스크
@@ -53,45 +58,23 @@ import java.time.LocalDate;
  *
  */
 
-public class TraditionalHard implements Comparable<TraditionalHard> {
+public class TraditionalHard {
 	private String 제품코드; // 하드디스크 제품코드.
 	private String 제품브랜드; // 하드디스크 제품 브랜드 이름.
 	private String 제품이름; // 하드디스크 제품 이름.
 	private String 제품설명; // 하드디스크 제품 정보 출력.
 	private String 하드디스크용량; // 하드 디스크 용량 별 정보 출력.
 	private double 제품가격; // 하드디스크 제품 가격 정보.
+	private LocalDate 제조일자 = null; // 하드 디스크 제조일자.
+	private LocalDate 제품등록일 = null; // 하드 디스크 제품 등록일자.
 	private int 제품무게 = 0; // 하드 디스크 무게.
+	
 	private int 하드디스크수량 = 0; // 하드 디스크 재고 수량.
 	private int 하드디스크판매수량 = 0; // 하드 다스크 판매 수량.
 	private int 하드디스크판매누적량 = 0; // 하드 디스크 판매 누적량.
-	private LocalDate 제조일 = null; // 하드 디스크 제조일자.
-	private LocalDate 등록일; // 하드 디스크 등록일자.	
-	private Image 제품이미지; // 이미지(jpg, png, bmp, jpng)
-	private File 제품내용; // 설명 odt 파일
+	private float 고객평점;
 	
-	public TraditionalHard(String 제품코드, String 제품브랜드, String 제품이름, String 제품설명, 
-			String 하드디스크용량, Image 제품이미지, File 제품내용,double 제품가격, int 제품무게, 
-			int 하드디스크수량, int 하드디스크판매수량, int 하드디스크판매누적량,
-			LocalDate 제조일, LocalDate 등록일) {
-		
-		super();
-		this.제품코드 = 제품코드; 
-		this.제품브랜드 = 제품브랜드; 
-		this.제품이름 = 제품이름;
-		this.제품설명 = 제품설명;
-		this.하드디스크용량 = 하드디스크용량;
-		this.제품이미지 = 제품이미지;
-		this.제품내용 = 제품내용;
-		
-		this.제품가격 = 제품가격;
-		this.제품무게 = 제품무게;
-		this.하드디스크수량 = 하드디스크수량;
-		this.하드디스크판매수량 = 하드디스크판매수량;
-		this.하드디스크판매누적량 = 하드디스크판매누적량;
-		
-		this.제조일 = 제조일;
-		this.등록일 = 등록일;
-	}
+
 	/**
 	 * 현 재고 상품들의 각 이름과 이미지 내용등을 그룹화 해야한다.
 	 * 
@@ -108,11 +91,12 @@ public class TraditionalHard implements Comparable<TraditionalHard> {
 	public void set제품설명(String 제품설명) { this.제품설명 = 제품설명;}
 	public String get하드디스크용량() { return 하드디스크용량;}
 	public void set하드디스크용량(String 하드디스크용량) { this.하드디스크용량 = 하드디스크용량;}
-	public Image get제품이미지() { return 제품이미지;}
-	public void set제품이미지(Image 제품이미지) { this.제품이미지 = 제품이미지;}
-	public File get제품내용() { return 제품내용;}
-	public void set제품내용(File 제품내용) { this.제품내용 = 제품내용;}
-	
+	public LocalDate get제품등록일() {return 제품등록일;}
+	public void set제품등록일(LocalDate 제품등록일) {this.제품등록일 = 제품등록일;}
+	public LocalDate get제조일자() {return 제조일자;}
+	public void set제조일자(LocalDate 제조일자) {this.제조일자 = 제조일자;}
+
+
 	/**
 	 * 
 	 * @param 제품가격 및 수량과 판매량
@@ -127,25 +111,12 @@ public class TraditionalHard implements Comparable<TraditionalHard> {
 	public void set하드디스크판매수량(int 하드디스크판매수량) { this.하드디스크판매수량 = 하드디스크판매수량;}
 	public int get하드디스크판매누적량() { return 하드디스크판매누적량;}
 	public void set하드디스크판매누적량(int 하드디스크판매누적량) { this.하드디스크판매누적량 = 하드디스크판매누적량;}
+	public float get고객평점() {return 고객평점;}
+	public void set고객평점(float 고객평점) {this.고객평점 = 고객평점;}
+
 
 	//=====================================================================================
 	
-	/**
-	 * 
-	 * 현 상품들의 제조일과 등록일을 관리한다.
-	 * 
-	 * @param 제조 등록일
-	 */
-	
-	public LocalDate get제조일() {return 제조일;}
-	public void set제조일(LocalDate 제조일) { this.제조일 = 제조일;}
-	public LocalDate get등록일() { return 등록일;}
-	public void set등록일(LocalDate 등록일) { this.등록일 = 등록일;}
-	
-	@Override
-	public int compareTo(TraditionalHard o) {
-		return 0;
-	}
 
 }
 
