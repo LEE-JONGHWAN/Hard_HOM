@@ -1,6 +1,7 @@
 package com.jhlee.hardshop.utility;
 
 public enum Size {
+
 	SMALL("250"),MEDIUM("500"),
 	LARGE("1");
 
