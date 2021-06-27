@@ -14,9 +14,10 @@ public class HardShop {
 
 	public static void main(String[] args) {
 		var jhHard = new HardShop();
-		System.out.println("====================");
+		System.out.println("=".repeat(20) );
 		System.out.println("JH 하드샵에 환영합니다");
-		System.out.println("==================== \n");
+		System.out.println("=".repeat(20));
+		System.out.println("\n");
 		jhHard.selections();
 		BrandName type = null;
 		do {
@@ -78,7 +79,6 @@ public class HardShop {
 		//@formatter:on
 		for (int i = 0; i < brandNames.length; i++) {
 			var hrMenu = new StringBuffer(" -");
-
 			hrMenu.append(brandNames[i]);
 			if (i == specialInx)
 				hrMenu.append("*");
